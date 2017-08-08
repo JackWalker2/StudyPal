@@ -1,4 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12140" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ClassView" representedClassName="ClassView" syncable="YES" codeGenerationType="class">
+        <attribute name="classFour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classOne" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classThree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classTwo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FourClasses" representedClassName="FourClasses" syncable="YES" codeGenerationType="class">
+        <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FourGrade" representedClassName="FourGrade" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grade" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FourReminders" representedClassName="FourReminders" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OneClasses" representedClassName="OneClasses" syncable="YES" codeGenerationType="class">
+        <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="OneGrade" representedClassName="OneGrade" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overallGrade" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="OneReminders" representedClassName="OneReminders" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SubjectName" representedClassName="SubjectName" syncable="YES" codeGenerationType="class">
+        <attribute name="subjectFourName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subjectInitialised" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subjectOneName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subjectThreeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subjectTwoName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ThreeClasses" representedClassName="ThreeClasses" syncable="YES" codeGenerationType="class">
+        <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ThreeGrade" representedClassName="ThreeGrade" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grade" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ThreeReminders" representedClassName="ThreeReminders" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TwoClasses" representedClassName="TwoClasses" syncable="YES" codeGenerationType="class">
+        <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TwoGrade" representedClassName="TwoGrade" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grade" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TwoReminders" representedClassName="TwoReminders" syncable="YES" codeGenerationType="class">
+        <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ViewColor" representedClassName="ViewColor" syncable="YES" codeGenerationType="class">
+        <attribute name="viewFour" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="viewOne" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="viewThree" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="viewTwo" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ClassView" positionX="-45" positionY="27" width="128" height="105"/>
+        <element name="FourClasses" positionX="0" positionY="54" width="128" height="120"/>
+        <element name="FourGrade" positionX="36" positionY="99" width="128" height="75"/>
+        <element name="FourReminders" positionX="-9" positionY="45" width="128" height="90"/>
+        <element name="OneClasses" positionX="-54" positionY="9" width="128" height="120"/>
+        <element name="OneGrade" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="OneReminders" positionX="-36" positionY="36" width="128" height="90"/>
+        <element name="SubjectName" positionX="-9" positionY="54" width="128" height="120"/>
+        <element name="ThreeClasses" positionX="-18" positionY="63" width="128" height="120"/>
+        <element name="ThreeGrade" positionX="0" positionY="72" width="128" height="75"/>
+        <element name="ThreeReminders" positionX="18" positionY="81" width="128" height="90"/>
+        <element name="TwoClasses" positionX="-45" positionY="36" width="128" height="120"/>
+        <element name="TwoGrade" positionX="-27" positionY="54" width="128" height="75"/>
+        <element name="TwoReminders" positionX="-36" positionY="45" width="128" height="90"/>
+        <element name="ViewColor" positionX="-9" positionY="54" width="128" height="105"/>
+    </elements>
 </model>

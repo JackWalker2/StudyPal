@@ -7,23 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711B75F63D51DA605407BF44 /* Pods_Study_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE39491EE51E37DF3E07CE7 /* Pods_Study_Buddy.framework */; };
+		D13287AC1EC3ED08005CF780 /* SubjectPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13287AB1EC3ED08005CF780 /* SubjectPopUpViewController.swift */; };
+		D1335D731EE8438A00F9BDE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1335D721EE8438A00F9BDE4 /* GoogleService-Info.plist */; };
+		D15203091EC201F80019DC50 /* GradePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15203081EC201F80019DC50 /* GradePopUpViewController.swift */; };
+		D15A9BCB1EC14E9A00077967 /* MyClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15A9BCA1EC14E9A00077967 /* MyClassesViewController.swift */; };
+		D15A9BCD1EC14EB300077967 /* MyTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15A9BCC1EC14EB300077967 /* MyTimetableViewController.swift */; };
 		D16EB8291EC0B93000C625F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB8281EC0B93000C625F9 /* AppDelegate.swift */; };
 		D16EB82B1EC0B93000C625F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16EB82A1EC0B93000C625F9 /* ViewController.swift */; };
 		D16EB82E1EC0B93000C625F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D16EB82C1EC0B93000C625F9 /* Main.storyboard */; };
 		D16EB8311EC0B93000C625F9 /* Study_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D16EB82F1EC0B93000C625F9 /* Study_Buddy.xcdatamodeld */; };
-		D16EB8331EC0B93000C625F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D16EB8321EC0B93000C625F9 /* Assets.xcassets */; };
 		D16EB8361EC0B93000C625F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D16EB8341EC0B93000C625F9 /* LaunchScreen.storyboard */; };
+		D172980B1EDEEFC200DA2EFF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172980A1EDEEFC200DA2EFF /* SettingsViewController.swift */; };
+		D18AFF9A1EC2968300439612 /* ClassPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18AFF991EC2968300439612 /* ClassPopUpViewController.swift */; };
+		D1A364D71EE0F3BB00FD112F /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A364D61EE0F3BB00FD112F /* IssueViewController.swift */; };
+		D1D6099E1EE05BEB000387B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D6099D1EE05BEB000387B9 /* Assets.xcassets */; };
+		D1E70E741EE591DE00D7EFE3 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E70E731EE591DE00D7EFE3 /* SupportViewController.swift */; };
+		D1F1651C1EC28DE3000A2129 /* RemindersPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F1651B1EC28DE3000A2129 /* RemindersPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AE39491EE51E37DF3E07CE7 /* Pods_Study_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBACA894D4C9194B318209F /* Pods-Study Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Buddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study Buddy/Pods-Study Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		B7C62A4958F383AB4365D6AB /* Pods-Study Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Buddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study Buddy/Pods-Study Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		D13287AB1EC3ED08005CF780 /* SubjectPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectPopUpViewController.swift; sourceTree = "<group>"; };
+		D1335D721EE8438A00F9BDE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1424E411EE83DA600D428A1 /* Study Buddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Study Buddy.entitlements"; sourceTree = "<group>"; };
+		D15203081EC201F80019DC50 /* GradePopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradePopUpViewController.swift; sourceTree = "<group>"; };
+		D15A9BCA1EC14E9A00077967 /* MyClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClassesViewController.swift; sourceTree = "<group>"; };
+		D15A9BCC1EC14EB300077967 /* MyTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTimetableViewController.swift; sourceTree = "<group>"; };
 		D16EB8251EC0B93000C625F9 /* Study Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D16EB8281EC0B93000C625F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D16EB82A1EC0B93000C625F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D16EB82D1EC0B93000C625F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D16EB8301EC0B93000C625F9 /* Study_Buddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Study_Buddy.xcdatamodel; sourceTree = "<group>"; };
-		D16EB8321EC0B93000C625F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D16EB8351EC0B93000C625F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D16EB8371EC0B93000C625F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D172980A1EDEEFC200DA2EFF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D18AFF991EC2968300439612 /* ClassPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassPopUpViewController.swift; sourceTree = "<group>"; };
+		D1A364D61EE0F3BB00FD112F /* IssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
+		D1D6099D1EE05BEB000387B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1E70E731EE591DE00D7EFE3 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		D1F1651B1EC28DE3000A2129 /* RemindersPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +56,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711B75F63D51DA605407BF44 /* Pods_Study_Buddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16107C0E32DDAFB7A108C883 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DBACA894D4C9194B318209F /* Pods-Study Buddy.debug.xcconfig */,
+				B7C62A4958F383AB4365D6AB /* Pods-Study Buddy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1E1974EF15F8D27CABF390F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AE39491EE51E37DF3E07CE7 /* Pods_Study_Buddy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D16EB81C1EC0B93000C625F9 = {
 			isa = PBXGroup;
 			children = (
 				D16EB8271EC0B93000C625F9 /* Study Buddy */,
 				D16EB8261EC0B93000C625F9 /* Products */,
+				16107C0E32DDAFB7A108C883 /* Pods */,
+				1E1974EF15F8D27CABF390F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +101,23 @@
 		D16EB8271EC0B93000C625F9 /* Study Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				D1424E411EE83DA600D428A1 /* Study Buddy.entitlements */,
 				D16EB8281EC0B93000C625F9 /* AppDelegate.swift */,
 				D16EB82A1EC0B93000C625F9 /* ViewController.swift */,
+				D15A9BCA1EC14E9A00077967 /* MyClassesViewController.swift */,
+				D15A9BCC1EC14EB300077967 /* MyTimetableViewController.swift */,
+				D13287AB1EC3ED08005CF780 /* SubjectPopUpViewController.swift */,
+				D15203081EC201F80019DC50 /* GradePopUpViewController.swift */,
+				D1F1651B1EC28DE3000A2129 /* RemindersPopUpViewController.swift */,
+				D18AFF991EC2968300439612 /* ClassPopUpViewController.swift */,
+				D172980A1EDEEFC200DA2EFF /* SettingsViewController.swift */,
+				D1A364D61EE0F3BB00FD112F /* IssueViewController.swift */,
+				D1E70E731EE591DE00D7EFE3 /* SupportViewController.swift */,
 				D16EB82C1EC0B93000C625F9 /* Main.storyboard */,
-				D16EB8321EC0B93000C625F9 /* Assets.xcassets */,
 				D16EB8341EC0B93000C625F9 /* LaunchScreen.storyboard */,
+				D1D6099D1EE05BEB000387B9 /* Assets.xcassets */,
 				D16EB8371EC0B93000C625F9 /* Info.plist */,
+				D1335D721EE8438A00F9BDE4 /* GoogleService-Info.plist */,
 				D16EB82F1EC0B93000C625F9 /* Study_Buddy.xcdatamodeld */,
 			);
 			path = "Study Buddy";
@@ -74,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D16EB83A1EC0B93000C625F9 /* Build configuration list for PBXNativeTarget "Study Buddy" */;
 			buildPhases = (
+				A744D183F94D2F80D8438D4D /* [CP] Check Pods Manifest.lock */,
 				D16EB8211EC0B93000C625F9 /* Sources */,
 				D16EB8221EC0B93000C625F9 /* Frameworks */,
 				D16EB8231EC0B93000C625F9 /* Resources */,
+				5BE2D8E8317F47F13848D0D1 /* [CP] Embed Pods Frameworks */,
+				5B98972710CAAFFF8BCFB4CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,8 +158,13 @@
 				TargetAttributes = {
 					D16EB8241EC0B93000C625F9 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 3DX3TQP475;
+						DevelopmentTeam = A95GEW2TT2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,12 +192,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16EB8361EC0B93000C625F9 /* LaunchScreen.storyboard in Resources */,
-				D16EB8331EC0B93000C625F9 /* Assets.xcassets in Resources */,
+				D1D6099E1EE05BEB000387B9 /* Assets.xcassets in Resources */,
+				D1335D731EE8438A00F9BDE4 /* GoogleService-Info.plist in Resources */,
 				D16EB82E1EC0B93000C625F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B98972710CAAFFF8BCFB4CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Study Buddy/Pods-Study Buddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BE2D8E8317F47F13848D0D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Study Buddy/Pods-Study Buddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A744D183F94D2F80D8438D4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D16EB8211EC0B93000C625F9 /* Sources */ = {
@@ -141,8 +254,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16EB82B1EC0B93000C625F9 /* ViewController.swift in Sources */,
+				D13287AC1EC3ED08005CF780 /* SubjectPopUpViewController.swift in Sources */,
+				D1E70E741EE591DE00D7EFE3 /* SupportViewController.swift in Sources */,
+				D15203091EC201F80019DC50 /* GradePopUpViewController.swift in Sources */,
+				D172980B1EDEEFC200DA2EFF /* SettingsViewController.swift in Sources */,
+				D18AFF9A1EC2968300439612 /* ClassPopUpViewController.swift in Sources */,
 				D16EB8311EC0B93000C625F9 /* Study_Buddy.xcdatamodeld in Sources */,
 				D16EB8291EC0B93000C625F9 /* AppDelegate.swift in Sources */,
+				D15A9BCB1EC14E9A00077967 /* MyClassesViewController.swift in Sources */,
+				D1F1651C1EC28DE3000A2129 /* RemindersPopUpViewController.swift in Sources */,
+				D1A364D71EE0F3BB00FD112F /* IssueViewController.swift in Sources */,
+				D15A9BCD1EC14EB300077967 /* MyTimetableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -253,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -263,27 +385,37 @@
 		};
 		D16EB83B1EC0B93000C625F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DBACA894D4C9194B318209F /* Pods-Study Buddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3DX3TQP475;
+				CODE_SIGN_ENTITLEMENTS = "Study Buddy/Study Buddy.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = A95GEW2TT2;
 				INFOPLIST_FILE = "Study Buddy/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JackWalker.Study-Buddy";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JackWalker.StudyPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D16EB83C1EC0B93000C625F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C62A4958F383AB4365D6AB /* Pods-Study Buddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3DX3TQP475;
+				CODE_SIGN_ENTITLEMENTS = "Study Buddy/Study Buddy.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A95GEW2TT2;
 				INFOPLIST_FILE = "Study Buddy/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.JackWalker.Study-Buddy";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JackWalker.StudyPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -306,6 +438,7 @@
 				D16EB83C1EC0B93000C625F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
