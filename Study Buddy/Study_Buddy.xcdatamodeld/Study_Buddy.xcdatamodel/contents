@@ -19,6 +19,7 @@
     </entity>
     <entity name="FourReminders" representedClassName="FourReminders" syncable="YES" codeGenerationType="class">
         <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -36,6 +37,7 @@
     </entity>
     <entity name="OneReminders" representedClassName="OneReminders" syncable="YES" codeGenerationType="class">
         <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -59,6 +61,7 @@
     </entity>
     <entity name="ThreeReminders" representedClassName="ThreeReminders" syncable="YES" codeGenerationType="class">
         <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -75,6 +78,7 @@
     </entity>
     <entity name="TwoReminders" representedClassName="TwoReminders" syncable="YES" codeGenerationType="class">
         <attribute name="assessment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="due" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -88,17 +92,17 @@
         <element name="ClassView" positionX="-45" positionY="27" width="128" height="105"/>
         <element name="FourClasses" positionX="0" positionY="54" width="128" height="120"/>
         <element name="FourGrade" positionX="36" positionY="99" width="128" height="75"/>
-        <element name="FourReminders" positionX="-9" positionY="45" width="128" height="90"/>
+        <element name="FourReminders" positionX="-9" positionY="45" width="128" height="105"/>
         <element name="OneClasses" positionX="-54" positionY="9" width="128" height="120"/>
         <element name="OneGrade" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="OneReminders" positionX="-36" positionY="36" width="128" height="90"/>
+        <element name="OneReminders" positionX="-36" positionY="36" width="128" height="105"/>
         <element name="SubjectName" positionX="-9" positionY="54" width="128" height="120"/>
         <element name="ThreeClasses" positionX="-18" positionY="63" width="128" height="120"/>
         <element name="ThreeGrade" positionX="0" positionY="72" width="128" height="75"/>
-        <element name="ThreeReminders" positionX="18" positionY="81" width="128" height="90"/>
+        <element name="ThreeReminders" positionX="18" positionY="81" width="128" height="105"/>
         <element name="TwoClasses" positionX="-45" positionY="36" width="128" height="120"/>
         <element name="TwoGrade" positionX="-27" positionY="54" width="128" height="75"/>
-        <element name="TwoReminders" positionX="-36" positionY="45" width="128" height="90"/>
+        <element name="TwoReminders" positionX="-36" positionY="45" width="128" height="105"/>
         <element name="ViewColor" positionX="-9" positionY="54" width="128" height="105"/>
     </elements>
 </model>

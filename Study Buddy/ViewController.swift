@@ -17,12 +17,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var remindersArray2 : [TwoReminders] = []
     var remindersArray3 : [ThreeReminders] = []
     var remindersArray4 : [FourReminders] = []
-    var allReminders = [] as! [Array<Any>]
+    var allReminders = [] as! [Array<String>]
     var classesArray : [OneClasses] = []
     var classView : [ClassView] = []
     var subjectList : [SubjectName] = []
     
-    @IBOutlet weak var bannerView: GADBannerView!
+//    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var RemindersTableView: UITableView!
     @IBOutlet weak var ClassOneLabel: UILabel!
     @IBOutlet weak var ClassTwoLabel: UILabel!
@@ -57,9 +57,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         RemindersTableView.reloadData()
         
-        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+//        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
+//        bannerView.rootViewController = self
+//        bannerView.load(GADRequest())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,9 +90,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func getDate() {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd"
+        formatter.dateFormat = "E,  MMM d"
         let result = formatter.string(from: date)
-        DateLabel.text = "TODAY'S DATE: \(result)"
+        DateLabel.text = "TODAY'S DATE:  \(result)"
     }
     
     func setUpSubject() {
@@ -120,10 +120,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sortedReminders = allReminders.sorted( by: { ($0[1] as! String) < ($1[1] as! String) })
+        let sortedReminders = allReminders.sorted(by: { $0[1].compare($1[1]) == .orderedAscending })
+//        let sortedReminders = allReminders.sorted( by: { ($0[1] as! String) < ($1[1] as! String) })
         let cell = UITableViewCell()
         let reminderAssessment = sortedReminders[indexPath.row][0]
-        let reminderDue = sortedReminders[indexPath.row][1]
+        let reminderDue = sortedReminders[indexPath.row][3]
         let reminderSubject = sortedReminders[indexPath.row][2]
         cell.textLabel?.text = "\(String(describing: reminderSubject)):    \(String(describing: reminderAssessment))       \(String(describing: reminderDue))"
         cell.textLabel?.font = UIFont(name: "AvenirNextCondensed-Bold", size: 18)
@@ -148,16 +149,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         allReminders.removeAll()
         for i in remindersArray1 {
-            allReminders.append([i.assessment!, i.due!, i.subject!])
+            allReminders.append([i.assessment!, i.due!, i.subject!, i.date!])
         }
         for i in remindersArray2 {
-            allReminders.append([i.assessment!, i.due!, i.subject!])
+            allReminders.append([i.assessment!, i.due!, i.subject!, i.date!])
         }
         for i in remindersArray3 {
-            allReminders.append([i.assessment!, i.due!, i.subject!])
+            allReminders.append([i.assessment!, i.due!, i.subject!, i.date!])
         }
         for i in remindersArray4 {
-            allReminders.append([i.assessment!, i.due!, i.subject!])
+            allReminders.append([i.assessment!, i.due!, i.subject!, i.date!])
         }
     }
     

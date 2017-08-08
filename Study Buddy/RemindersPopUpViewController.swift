@@ -26,14 +26,23 @@ class RemindersPopUpViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func AddReminderButton(_ sender: Any) {
+        if AssessmentTextField.text == "" {
+            let alertVC = UIAlertController(title: "ERROR!", message: "Assessment text field was left blank", preferredStyle: .alert)
+            let okay = UIAlertAction(title: "OKAY", style: .default, handler: nil)
+            alertVC.addAction(okay)
+            self.present(alertVC, animated: true, completion: nil)
+        } else {
             if classNumber == "1" {
                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                 let reminder = OneReminders(context: context)
                 reminder.assessment = AssessmentTextField.text!
                 let DateFormat = DateFormatter()
+                DateFormat.dateFormat = "yyyy.MM.dd"
+                var SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.due = String(describing: SelectedDate)
                 DateFormat.dateFormat = "E,  MMM d"
-                let SelectedDate = DateFormat.string(from: DatePicker.date)
-                reminder.due = SelectedDate
+                SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.date = String(describing: SelectedDate)
                 reminder.subject = subjectName
 //                reminder.date = SelectedDate
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
@@ -44,9 +53,12 @@ class RemindersPopUpViewController: UIViewController, UITextFieldDelegate {
                 let reminder = TwoReminders(context: context)
                 reminder.assessment = AssessmentTextField.text!
                 let DateFormat = DateFormatter()
-                DateFormat.dateFormat = "MM/dd/yyyy"
-                let SelectedDate = DateFormat.string(from: DatePicker.date)
-                reminder.due = SelectedDate
+                DateFormat.dateFormat = "yyyy.MM.dd"
+                var SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.due = String(describing: SelectedDate)
+                DateFormat.dateFormat = "E,  MMM d"
+                SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.date = String(describing: SelectedDate)
                 reminder.subject = subjectName
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
                 self.removeAnimate()
@@ -56,9 +68,12 @@ class RemindersPopUpViewController: UIViewController, UITextFieldDelegate {
                 let reminder = ThreeReminders(context: context)
                 reminder.assessment = AssessmentTextField.text!
                 let DateFormat = DateFormatter()
-                DateFormat.dateFormat = "MM/dd/yyyy"
-                let SelectedDate = DateFormat.string(from: DatePicker.date)
-                reminder.due = SelectedDate
+                DateFormat.dateFormat = "yyyy.MM.dd"
+                var SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.due = String(describing: SelectedDate)
+                DateFormat.dateFormat = "E,  MMM d"
+                SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.date = String(describing: SelectedDate)
                 reminder.subject = subjectName
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
                 self.removeAnimate()
@@ -68,14 +83,18 @@ class RemindersPopUpViewController: UIViewController, UITextFieldDelegate {
                 let reminder = FourReminders(context: context)
                 reminder.assessment = AssessmentTextField.text!
                 let DateFormat = DateFormatter()
-                DateFormat.dateFormat = "MM/dd/yyyy"
-                let SelectedDate = DateFormat.string(from: DatePicker.date)
-                reminder.due = SelectedDate
+                DateFormat.dateFormat = "yyyy.MM.dd"
+                var SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.due = String(describing: SelectedDate)
+                DateFormat.dateFormat = "E,  MMM d"
+                SelectedDate = DateFormat.string(from: DatePicker.date)
+                reminder.date = String(describing: SelectedDate)
                 reminder.subject = subjectName
                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
                 self.removeAnimate()
             }
         }
+    }
 
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

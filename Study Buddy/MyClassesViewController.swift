@@ -21,21 +21,25 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var ClassesTableView: UITableView!
     @IBOutlet weak var MyClassLabel: UILabel!
     @IBOutlet weak var TitleView: UIView!
-    @IBOutlet weak var bannerView: GADBannerView!
+//    @IBOutlet weak var bannerView: GADBannerView!
     
     var titleName: String = ""
     var backgroundColour = UIColor.blue
     var gradesArray : [OneGrade] = []
     var remindersArray : [OneReminders] = []
+    var remindersArray1 = [] as! [Array<String>]
     var classesArray : [OneClasses] = []
     var gradesArray2 : [TwoGrade] = []
     var remindersArray2 : [TwoReminders] = []
+    var remindersArray22 = [] as! [Array<String>]
     var classesArray2 : [TwoClasses] = []
     var gradesArray3 : [ThreeGrade] = []
     var remindersArray3 : [ThreeReminders] = []
+    var remindersArray33 = [] as! [Array<String>]
     var classesArray3 : [ThreeClasses] = []
     var gradesArray4 : [FourGrade] = []
     var remindersArray4 : [FourReminders] = []
+    var remindersArray44 = [] as! [Array<String>]
     var classesArray4 : [FourClasses] = []
     
     override func viewDidLoad() {
@@ -59,9 +63,9 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
         RemindersTableView.reloadData()
         ClassesTableView.reloadData()
         
-        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+//        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
+//        bannerView.rootViewController = self
+//        bannerView.load(GADRequest())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,40 +136,48 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == RemindersTableView {
             if classNumber == "1" {
-                let sortedRem = remindersArray.sorted( by: { ($0.due)! < ($1.due)! })
+                let sortedRem = remindersArray1.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
+//                let sortedRem = remindersArray.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
-                let reminder = sortedRem[indexPath.row]
-                cell.textLabel?.text = "\(String(describing: reminder.assessment!)):    \(String(describing: reminder.due!))"
+                let reminderAssessmnet = sortedRem[indexPath.row][2]
+                let reminderDate = sortedRem[indexPath.row][1]
+                cell.textLabel?.text = "\(String(describing: reminderAssessmnet)):    \(String(describing: reminderDate))"
                 cell.textLabel?.font = UIFont(name: "AvenirNextCondensed-Medium", size: 18)
                 cell.textLabel?.adjustsFontSizeToFitWidth = true
                 cell.textLabel?.textAlignment = .center
                 return cell
             }
             if classNumber == "2" {
-                let sortedRem = remindersArray2.sorted( by: { ($0.due)! < ($1.due)! })
+                let sortedRem = remindersArray22.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
+//                let sortedRem = remindersArray2.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
-                let reminder = sortedRem[indexPath.row]
-                cell.textLabel?.text = "\(String(describing: reminder.assessment!)):    \(String(describing: reminder.due!))"
+                let reminderAssessmnet = sortedRem[indexPath.row][2]
+                let reminderDate = sortedRem[indexPath.row][1]
+                cell.textLabel?.text = "\(String(describing: reminderAssessmnet)):    \(String(describing: reminderDate))"
                 cell.textLabel?.font = UIFont(name: "AvenirNextCondensed-Medium", size: 18)
                 cell.textLabel?.adjustsFontSizeToFitWidth = true
                 cell.textLabel?.textAlignment = .center
                 return cell
             }
             if classNumber == "3" {
-                let sortedRem = remindersArray3.sorted( by: { ($0.due)! < ($1.due)! })
+                let sortedRem = remindersArray33.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
+//                let sortedRem = remindersArray3.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
-                let reminder = sortedRem[indexPath.row]
-                cell.textLabel?.text = "\(String(describing: reminder.assessment!)):    \(String(describing: reminder.due!))"
+                let reminderAssessmnet = sortedRem[indexPath.row][2]
+                let reminderDate = sortedRem[indexPath.row][1]
+                cell.textLabel?.text = "\(String(describing: reminderAssessmnet)):    \(String(describing: reminderDate))"
                 cell.textLabel?.font = UIFont(name: "AvenirNextCondensed-Medium", size: 18)
                 cell.textLabel?.adjustsFontSizeToFitWidth = true
                 cell.textLabel?.textAlignment = .center
                 return cell
             }
             if classNumber == "4" {
-                let sortedRem = remindersArray4.sorted( by: { ($0.due)! < ($1.due)! })
+                let sortedRem = remindersArray44.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
+//                let sortedRem = remindersArray4.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
-                let reminder = sortedRem[indexPath.row]
-                cell.textLabel?.text = "\(String(describing: reminder.assessment!)):    \(String(describing: reminder.due!))"
+                let reminderAssessmnet = sortedRem[indexPath.row][2]
+                let reminderDate = sortedRem[indexPath.row][1]
+                cell.textLabel?.text = "\(String(describing: reminderAssessmnet)):    \(String(describing: reminderDate))"
                 cell.textLabel?.font = UIFont(name: "AvenirNextCondensed-Medium", size: 18)
                 cell.textLabel?.adjustsFontSizeToFitWidth = true
                 cell.textLabel?.textAlignment = .center
@@ -296,15 +308,31 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
         do {
             if classNumber == "1" {
                 remindersArray = try context.fetch(OneReminders.fetchRequest()) as! [OneReminders]
+                remindersArray1.removeAll()
+                for i in remindersArray {
+                    remindersArray1.append([i.due!, i.date!, i.assessment!])
+                }
             } else
             if classNumber == "2" {
                 remindersArray2 = try context.fetch(TwoReminders.fetchRequest()) as! [TwoReminders]
+                remindersArray22.removeAll()
+                for i in remindersArray2 {
+                    remindersArray22.append([i.due!, i.date!, i.assessment!])
+                }
             } else
             if classNumber == "3" {
                 remindersArray3 = try context.fetch(ThreeReminders.fetchRequest()) as! [ThreeReminders]
+                remindersArray33.removeAll()
+                for i in remindersArray3 {
+                    remindersArray33.append([i.due!, i.date!, i.assessment!])
+                }
             } else
             if classNumber == "4" {
                 remindersArray4 = try context.fetch(FourReminders.fetchRequest()) as! [FourReminders]
+                remindersArray44.removeAll()
+                for i in remindersArray4 {
+                    remindersArray44.append([i.due!, i.date!, i.assessment!])
+                }
             }
         } catch {
             return
@@ -379,46 +407,55 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
             } else
                 if tableView == RemindersTableView {
                     if classNumber == "1" {
-                        let sortedRem = remindersArray.sorted( by: { ($0.due as String?)! < ($1.due as String?)! })
+                        let sortedRem = remindersArray.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
+//                        let sortedRem = remindersArray.sorted( by: { ($0.due as String?)! < ($1.due as String?)! })
                         let reminder = sortedRem[indexPath.row]
+                        print("HEELLLOO \(reminder)")
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)
                         (UIApplication.shared.delegate as! AppDelegate).saveContext()
                         do {
                             remindersArray = try context.fetch(OneReminders.fetchRequest())
+                            getReminders()
                             RemindersTableView.reloadData()
                         } catch {}
                     }
                     if classNumber == "2" {
-                        let sortedRem = remindersArray2.sorted( by: { ($0.due)! < ($1.due)! })
+                        let sortedRem = remindersArray2.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
+//                        let sortedRem = remindersArray2.sorted( by: { ($0.due)! < ($1.due)! })
                         let reminder = sortedRem[indexPath.row]
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)
                         (UIApplication.shared.delegate as! AppDelegate).saveContext()
                         do {
                             remindersArray2 = try context.fetch(TwoReminders.fetchRequest())
+                            getReminders()
                             RemindersTableView.reloadData()
                         } catch {}
                     }
                     if classNumber == "3" {
-                        let sortedRem = remindersArray3.sorted( by: { ($0.due)! < ($1.due)! })
+                        let sortedRem = remindersArray3.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
+//                        let sortedRem = remindersArray3.sorted( by: { ($0.due)! < ($1.due)! })
                         let reminder = sortedRem[indexPath.row]
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)
                         (UIApplication.shared.delegate as! AppDelegate).saveContext()
                         do {
                             remindersArray3 = try context.fetch(ThreeReminders.fetchRequest())
+                            getReminders()
                             RemindersTableView.reloadData()
                         } catch {}
                     }
                     if classNumber == "4" {
-                        let sortedRem = remindersArray4.sorted( by: { ($0.due)! < ($1.due)! })
+                        let sortedRem = remindersArray4.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
+//                        let sortedRem = remindersArray4.sorted( by: { ($0.due)! < ($1.due)! })
                         let reminder = sortedRem[indexPath.row]
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)
                         (UIApplication.shared.delegate as! AppDelegate).saveContext()
                         do {
                             remindersArray4 = try context.fetch(FourReminders.fetchRequest())
+                            getReminders()
                             RemindersTableView.reloadData()
                         } catch {}
                     }
