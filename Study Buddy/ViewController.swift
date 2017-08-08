@@ -120,7 +120,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sortedReminders = allReminders.sorted( by: { ($0[1] as? String)! < ($1[1] as? String)! })
+        let sortedReminders = allReminders.sorted( by: { ($0[1] as! String) < ($1[1] as! String) })
         let cell = UITableViewCell()
         let reminderAssessment = sortedReminders[indexPath.row][0]
         let reminderDue = sortedReminders[indexPath.row][1]

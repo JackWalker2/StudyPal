@@ -379,7 +379,7 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
             } else
                 if tableView == RemindersTableView {
                     if classNumber == "1" {
-                        let sortedRem = remindersArray.sorted( by: { ($0.due)! < ($1.due)! })
+                        let sortedRem = remindersArray.sorted( by: { ($0.due as String?)! < ($1.due as String?)! })
                         let reminder = sortedRem[indexPath.row]
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)

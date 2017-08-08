@@ -1393,17 +1393,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxR-qX-YsD">
-                                <rect key="frame" x="67.5" y="151" width="240" height="365"/>
+                                <rect key="frame" x="47.5" y="143.5" width="280" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4qW-Gx-hEs">
-                                        <rect key="frame" x="10" y="10" width="220" height="345"/>
+                                        <rect key="frame" x="10" y="10" width="260" height="360"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aO-dr-mkg" userLabel="Title">
-                                                <rect key="frame" x="0.0" y="0.0" width="220" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="61.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW  REMINDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KAu-gh-snw">
-                                                        <rect key="frame" x="3" y="1" width="214" height="61"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="28"/>
+                                                        <rect key="frame" x="3" y="1" width="254" height="59.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="38"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1426,56 +1426,57 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd3-3h-IHK">
-                                                <rect key="frame" x="0.0" y="63" width="220" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="260" height="23.5"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSESSMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7q-Ct-YXB">
-                                                <rect key="frame" x="0.0" y="97.5" width="220" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="85" width="260" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIi-yS-Pg3">
-                                                <rect key="frame" x="0.0" y="118" width="220" height="10"/>
+                                                <rect key="frame" x="0.0" y="106.5" width="260" height="9"/>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Assessment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpE-bR-hVz">
-                                                <rect key="frame" x="0.0" y="128" width="220" height="30"/>
+                                                <rect key="frame" x="0.0" y="115.5" width="260" height="31"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3q-GE-chm">
-                                                <rect key="frame" x="0.0" y="158" width="220" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="146.5" width="260" height="23.5"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbY-xh-6OD">
-                                                <rect key="frame" x="0.0" y="192.5" width="220" height="23.5"/>
+                                                <rect key="frame" x="0.0" y="170" width="260" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYN-ew-5yM">
-                                                <rect key="frame" x="0.0" y="216" width="220" height="10.5"/>
+                                                <rect key="frame" x="0.0" y="192" width="260" height="1"/>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLL-nk-fGX">
-                                                <rect key="frame" x="0.0" y="226.5" width="220" height="29.5"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
-                                            </textField>
+                                            <datePicker contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="WKk-7y-eLP">
+                                                <rect key="frame" x="0.0" y="193" width="260" height="115"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="523847150.07015502">
+                                                    <!--2017-08-08 01:05:50 +0000-->
+                                                </date>
+                                            </datePicker>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9J-lE-iH8">
-                                                <rect key="frame" x="0.0" y="256" width="220" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="308" width="260" height="5"/>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mg9-E2-7Mf">
-                                                <rect key="frame" x="0.0" y="290.5" width="220" height="54.5"/>
+                                                <rect key="frame" x="0.0" y="313" width="260" height="47"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDd-yD-Ohr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="54.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="260" height="47"/>
                                                         <connections>
                                                             <action selector="AddReminderButton:" destination="BKc-Tc-n0r" eventType="touchUpInside" id="VgS-2A-fzh"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD  REMINDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loD-Ie-NFc">
-                                                        <rect key="frame" x="29" y="12" width="162.5" height="30.5"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <rect key="frame" x="30" y="5" width="201" height="37"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="34"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1485,9 +1486,9 @@
                                                     <constraint firstItem="loD-Ie-NFc" firstAttribute="centerX" secondItem="mg9-E2-7Mf" secondAttribute="centerX" id="E8C-Q4-eOs"/>
                                                     <constraint firstItem="hDd-yD-Ohr" firstAttribute="leading" secondItem="mg9-E2-7Mf" secondAttribute="leading" id="VQn-sY-9eN"/>
                                                     <constraint firstAttribute="bottom" secondItem="hDd-yD-Ohr" secondAttribute="bottom" id="gzw-zg-7OC"/>
-                                                    <constraint firstItem="loD-Ie-NFc" firstAttribute="top" secondItem="mg9-E2-7Mf" secondAttribute="top" constant="12" id="nFn-bv-3dp"/>
+                                                    <constraint firstItem="loD-Ie-NFc" firstAttribute="top" secondItem="mg9-E2-7Mf" secondAttribute="top" constant="5" id="nFn-bv-3dp"/>
                                                     <constraint firstItem="hDd-yD-Ohr" firstAttribute="top" secondItem="mg9-E2-7Mf" secondAttribute="top" id="qez-W7-KJ6"/>
-                                                    <constraint firstAttribute="bottom" secondItem="loD-Ie-NFc" secondAttribute="bottom" constant="12" id="rC8-U8-Wvh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="loD-Ie-NFc" secondAttribute="bottom" constant="5" id="rC8-U8-Wvh"/>
                                                     <constraint firstAttribute="trailing" secondItem="hDd-yD-Ohr" secondAttribute="trailing" id="uut-gu-1jN"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -1501,16 +1502,16 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="b7q-Ct-YXB" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.0608696" id="0yC-Gx-ygi"/>
-                                            <constraint firstItem="Qd3-3h-IHK" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.1" id="3pe-zg-Z9v"/>
-                                            <constraint firstItem="lbY-xh-6OD" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.0695652" id="E3i-AX-E6w"/>
-                                            <constraint firstItem="3aO-dr-mkg" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.182609" id="Ftz-T1-uR2"/>
-                                            <constraint firstItem="B9J-lE-iH8" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.1" id="Gu5-M6-30M"/>
-                                            <constraint firstItem="dLL-nk-fGX" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.0869565" id="IW8-JS-HXI"/>
-                                            <constraint firstItem="GYN-ew-5yM" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.0289855" id="Qne-5N-rov"/>
-                                            <constraint firstItem="Q3q-GE-chm" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.1" id="UJ7-Jo-br8"/>
-                                            <constraint firstItem="FIi-yS-Pg3" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.0289855" id="WXt-Fw-NL2"/>
-                                            <constraint firstItem="vpE-bR-hVz" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="0.0869565" id="fdA-cz-nlT"/>
+                                            <constraint firstItem="b7q-Ct-YXB" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="23/380" id="0yC-Gx-ygi"/>
+                                            <constraint firstItem="Qd3-3h-IHK" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="25/380" id="3pe-zg-Z9v"/>
+                                            <constraint firstItem="lbY-xh-6OD" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="23/380" id="E3i-AX-E6w"/>
+                                            <constraint firstItem="3aO-dr-mkg" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="65/380" id="Ftz-T1-uR2"/>
+                                            <constraint firstItem="B9J-lE-iH8" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="5/380" id="Gu5-M6-30M"/>
+                                            <constraint firstItem="WKk-7y-eLP" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="110/345" id="Gv5-b6-Ubx"/>
+                                            <constraint firstItem="GYN-ew-5yM" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="1/380" id="Qne-5N-rov"/>
+                                            <constraint firstItem="Q3q-GE-chm" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="25/380" id="UJ7-Jo-br8"/>
+                                            <constraint firstItem="FIi-yS-Pg3" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="10/380" id="WXt-Fw-NL2"/>
+                                            <constraint firstItem="vpE-bR-hVz" firstAttribute="height" secondItem="4qW-Gx-hEs" secondAttribute="height" multiplier="33/380" id="fdA-cz-nlT"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -1531,7 +1532,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-Hv-hg2">
-                                <rect key="frame" x="0.0" y="516" width="375" height="151"/>
+                                <rect key="frame" x="0.0" y="523.5" width="375" height="143.5"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="0.44102072309231" green="0.34311993548926678" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -1540,7 +1541,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbL-pJ-Xcr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="0.44102072310000001" green="0.34311993549999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -1549,7 +1550,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-si-grI">
-                                <rect key="frame" x="0.0" y="151" width="67.5" height="365"/>
+                                <rect key="frame" x="0.0" y="143.5" width="47.5" height="380"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="0.44102072310000001" green="0.34311993549999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -1558,7 +1559,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="da2-R1-RX8">
-                                <rect key="frame" x="307.5" y="151" width="67.5" height="365"/>
+                                <rect key="frame" x="327.5" y="143.5" width="47.5" height="380"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="0.44102072310000001" green="0.34311993549999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -1570,7 +1571,7 @@
                         <constraints>
                             <constraint firstItem="UbL-pJ-Xcr" firstAttribute="top" secondItem="KqV-Av-x2C" secondAttribute="top" id="1UR-tf-jfX"/>
                             <constraint firstItem="dxR-qX-YsD" firstAttribute="centerY" secondItem="KqV-Av-x2C" secondAttribute="centerY" id="3Uf-UR-P7U"/>
-                            <constraint firstItem="dxR-qX-YsD" firstAttribute="width" secondItem="KqV-Av-x2C" secondAttribute="width" multiplier="0.64" id="3av-Mt-B9v"/>
+                            <constraint firstItem="dxR-qX-YsD" firstAttribute="width" secondItem="KqV-Av-x2C" secondAttribute="width" multiplier="280/375" id="3av-Mt-B9v"/>
                             <constraint firstAttribute="trailing" secondItem="da2-R1-RX8" secondAttribute="trailing" id="3yT-YE-2Gh"/>
                             <constraint firstItem="dxR-qX-YsD" firstAttribute="leading" secondItem="QYG-si-grI" secondAttribute="trailing" id="4O6-Se-Vfw"/>
                             <constraint firstItem="QYG-si-grI" firstAttribute="top" secondItem="UbL-pJ-Xcr" secondAttribute="bottom" id="B5W-5a-IqW"/>
@@ -1589,13 +1590,13 @@
                             <constraint firstItem="dxR-qX-YsD" firstAttribute="centerX" secondItem="KqV-Av-x2C" secondAttribute="centerX" id="iPg-kI-fry"/>
                             <constraint firstItem="da2-R1-RX8" firstAttribute="top" secondItem="UbL-pJ-Xcr" secondAttribute="bottom" id="leE-Mh-Qza"/>
                             <constraint firstItem="ZJl-Hv-hg2" firstAttribute="leading" secondItem="KqV-Av-x2C" secondAttribute="leading" id="lzN-Ur-vRU"/>
-                            <constraint firstItem="dxR-qX-YsD" firstAttribute="height" secondItem="KqV-Av-x2C" secondAttribute="height" multiplier="0.547226" id="urz-XS-UWq"/>
+                            <constraint firstItem="dxR-qX-YsD" firstAttribute="height" secondItem="KqV-Av-x2C" secondAttribute="height" multiplier="380/667" id="urz-XS-UWq"/>
                             <constraint firstItem="dxR-qX-YsD" firstAttribute="top" secondItem="UbL-pJ-Xcr" secondAttribute="bottom" id="zBn-2y-14E"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="AssessmentTextField" destination="vpE-bR-hVz" id="Cj0-I3-yNn"/>
-                        <outlet property="DueTextField" destination="dLL-nk-fGX" id="sAu-uF-BUw"/>
+                        <outlet property="DatePicker" destination="WKk-7y-eLP" id="vEX-ah-dwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oI4-CB-ACb" userLabel="First Responder" sceneMemberID="firstResponder"/>
