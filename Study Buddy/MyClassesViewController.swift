@@ -137,7 +137,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
         if tableView == RemindersTableView {
             if classNumber == "1" {
                 let sortedRem = remindersArray1.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
-//                let sortedRem = remindersArray.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
                 let reminderAssessmnet = sortedRem[indexPath.row][2]
                 let reminderDate = sortedRem[indexPath.row][1]
@@ -149,7 +148,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             if classNumber == "2" {
                 let sortedRem = remindersArray22.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
-//                let sortedRem = remindersArray2.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
                 let reminderAssessmnet = sortedRem[indexPath.row][2]
                 let reminderDate = sortedRem[indexPath.row][1]
@@ -161,7 +159,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             if classNumber == "3" {
                 let sortedRem = remindersArray33.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
-//                let sortedRem = remindersArray3.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
                 let reminderAssessmnet = sortedRem[indexPath.row][2]
                 let reminderDate = sortedRem[indexPath.row][1]
@@ -173,7 +170,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             if classNumber == "4" {
                 let sortedRem = remindersArray44.sorted(by: { $0[0].compare($1[0]) == .orderedAscending })
-//                let sortedRem = remindersArray4.sorted( by: { ($0.due)! < ($1.due)! })
                 let cell = UITableViewCell()
                 let reminderAssessmnet = sortedRem[indexPath.row][2]
                 let reminderDate = sortedRem[indexPath.row][1]
@@ -224,6 +220,21 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
         } else
             if tableView == ClassesTableView {
                 if classNumber == "1" {
+                    
+//                    let sortedClasses = classesArray.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
+                    
+//                    let sortedTues = tuesdayClasses.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
+//                    let cell = UITableViewCell()
+//                    let classesSubject = sortedTues[indexPath.row][0]
+//                    let classesClasses = sortedTues[indexPath.row][1]
+//                    let classesTime = sortedTues[indexPath.row][2]
+//                    let classesLocation = sortedTues[indexPath.row][3]
+//                    cell.textLabel?.text = "\(String(describing: classesSubject)): \(String(describing: classesClasses)) @ \(String(describing: classesLocation)), \(String(describing: classesTime))"
+//                    cell.textLabel?.font = UIFont(name: "AvenirNextCondensed-Regular", size: 18)
+//                    cell.textLabel?.adjustsFontSizeToFitWidth = true
+//                    cell.textLabel?.textAlignment = .center
+//                    return cell
+                    
                     let cell = UITableViewCell()
                     let classes = classesArray[indexPath.row]
                     if classes.classes == nil {
@@ -354,7 +365,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
             if classNumber == "4" {
                 classesArray4 = try context.fetch(FourClasses.fetchRequest()) as! [FourClasses]
             }
-            print(classesArray)
         } catch {
             return
         }
@@ -408,9 +418,7 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
                 if tableView == RemindersTableView {
                     if classNumber == "1" {
                         let sortedRem = remindersArray.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
-//                        let sortedRem = remindersArray.sorted( by: { ($0.due as String?)! < ($1.due as String?)! })
                         let reminder = sortedRem[indexPath.row]
-                        print("HEELLLOO \(reminder)")
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)
                         (UIApplication.shared.delegate as! AppDelegate).saveContext()
@@ -422,7 +430,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
                     }
                     if classNumber == "2" {
                         let sortedRem = remindersArray2.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
-//                        let sortedRem = remindersArray2.sorted( by: { ($0.due)! < ($1.due)! })
                         let reminder = sortedRem[indexPath.row]
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)
@@ -435,7 +442,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
                     }
                     if classNumber == "3" {
                         let sortedRem = remindersArray3.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
-//                        let sortedRem = remindersArray3.sorted( by: { ($0.due)! < ($1.due)! })
                         let reminder = sortedRem[indexPath.row]
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)
@@ -448,7 +454,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
                     }
                     if classNumber == "4" {
                         let sortedRem = remindersArray4.sorted(by: { $0.due?.compare($1.due!) == .orderedAscending })
-//                        let sortedRem = remindersArray4.sorted( by: { ($0.due)! < ($1.due)! })
                         let reminder = sortedRem[indexPath.row]
                         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                         context.delete(reminder)

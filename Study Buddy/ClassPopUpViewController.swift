@@ -11,171 +11,163 @@ import UIKit
 class ClassPopUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ClassTextField: UITextField!
-    @IBOutlet weak var TimeTextField: UITextField!
     @IBOutlet weak var LocationTextField: UITextField!
     @IBOutlet weak var DaySegmented: UISegmentedControl!
+    @IBOutlet weak var TimePicker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.ClassTextField.delegate = self
-        self.TimeTextField.delegate = self
         self.LocationTextField.delegate = self
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         
         self.showAnimate()
+        
+        
     }
 
     @IBAction func AddClassButton(_ sender: Any) {
-        if ClassTextField.text == "" || TimeTextField.text == "" || LocationTextField.text == "" {
+        if ClassTextField.text == "" || LocationTextField.text == "" {
             let alertVC = UIAlertController(title: "ERROR", message: "One or more text fields were left blank!", preferredStyle: .alert)
             let okay = UIAlertAction(title: "OKAY", style: .default, handler: nil)
             alertVC.addAction(okay)
             self.present(alertVC, animated: true, completion: nil)
         } else {
             if classNumber == "1" {
-                if TimeTextField.text?.characters.count == 5 && "0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.startIndex)!])) != nil && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index(after: (TimeTextField.text?.startIndex)!))!])) != nil) && String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 2))!]) == ":" && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 3))!])) != nil) && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 4))!])) != nil)
-                    {
-                        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                        let classes = OneClasses(context: context)
-                        classes.classes = ClassTextField.text!
-                        classes.time = TimeTextField.text!
-                        classes.location = LocationTextField.text!
-                        classes.subject = subjectName
-                        if DaySegmented.selectedSegmentIndex == 0 {
-                            classes.day = "Monday"
-                        }
-                        if DaySegmented.selectedSegmentIndex == 1 {
-                            classes.day = "Tuesday"
-                        }
-                        if DaySegmented.selectedSegmentIndex == 2 {
-                            classes.day = "Wednesday"
-                        }
-                        if DaySegmented.selectedSegmentIndex == 3 {
-                            classes.day = "Thursday"
-                        }
-                        if DaySegmented.selectedSegmentIndex == 4 {
-                            classes.day = "Friday"
-                        }
-                        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                        self.removeAnimate()
-                } else {
-                    let alertVC = UIAlertController(title: "ERROR", message: "Time Text Field has incorrect format! \n \n Example: 12:30", preferredStyle: .alert)
-                    let okay = UIAlertAction(title: "OKAY", style: .default, handler: nil)
-                    alertVC.addAction(okay)
-                    self.present(alertVC, animated: true, completion: nil)
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let classes = OneClasses(context: context)
+                classes.classes = ClassTextField.text!
+                var DateFormat = DateFormatter()
+                DateFormat.dateFormat = "h:mm a"
+                var SelectedDate = DateFormat.string(from: TimePicker.clampedDate)
+                classes.time = String(describing: SelectedDate)
+                DateFormat = DateFormatter()
+                DateFormat.dateFormat = "a HH:mm"
+                SelectedDate = DateFormat.string(from: TimePicker.date)
+                classes.realTime = String(describing: SelectedDate)
+                classes.location = LocationTextField.text!
+                classes.subject = subjectName
+                if DaySegmented.selectedSegmentIndex == 0 {
+                    classes.day = "Monday"
                 }
-                
+                if DaySegmented.selectedSegmentIndex == 1 {
+                    classes.day = "Tuesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 2 {
+                    classes.day = "Wednesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 3 {
+                    classes.day = "Thursday"
+                }
+                if DaySegmented.selectedSegmentIndex == 4 {
+                    classes.day = "Friday"
+                }
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                self.removeAnimate()
             }
             if classNumber == "2" {
-                if TimeTextField.text?.characters.count == 5 && "0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.startIndex)!])) != nil && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index(after: (TimeTextField.text?.startIndex)!))!])) != nil) && String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 2))!]) == ":" && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 3))!])) != nil) && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 4))!])) != nil)
-                {
-                    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                    let classes = TwoClasses(context: context)
-                    classes.classes = ClassTextField.text!
-                    classes.time = TimeTextField.text!
-                    classes.location = LocationTextField.text!
-                    classes.subject = subjectName
-                    if DaySegmented.selectedSegmentIndex == 0 {
-                        classes.day = "Monday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 1 {
-                        classes.day = "Tuesday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 2 {
-                        classes.day = "Wednesday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 3 {
-                        classes.day = "Thursday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 4 {
-                        classes.day = "Friday"
-                    }
-                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                    self.removeAnimate()
-                } else {
-                    let alertVC = UIAlertController(title: "ERROR", message: "Time Text Field has incorrect format! \n \n Example: 12:30", preferredStyle: .alert)
-                    let okay = UIAlertAction(title: "OKAY", style: .default, handler: nil)
-                    alertVC.addAction(okay)
-                    self.present(alertVC, animated: true, completion: nil)
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let classes = TwoClasses(context: context)
+                classes.classes = ClassTextField.text!
+                var DateFormat = DateFormatter()
+                DateFormat.dateFormat = "h:mm a"
+                var SelectedDate = DateFormat.string(from: TimePicker.clampedDate)
+                classes.time = String(describing: SelectedDate)
+                DateFormat = DateFormatter()
+                DateFormat.dateFormat = "a HH:mm"
+                SelectedDate = DateFormat.string(from: TimePicker.date)
+                classes.realTime = String(describing: SelectedDate)
+                classes.location = LocationTextField.text!
+                classes.subject = subjectName
+                if DaySegmented.selectedSegmentIndex == 0 {
+                    classes.day = "Monday"
                 }
-                
+                if DaySegmented.selectedSegmentIndex == 1 {
+                    classes.day = "Tuesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 2 {
+                    classes.day = "Wednesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 3 {
+                    classes.day = "Thursday"
+                }
+                if DaySegmented.selectedSegmentIndex == 4 {
+                    classes.day = "Friday"
+                }
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                self.removeAnimate()
             }
             if classNumber == "3" {
-                if TimeTextField.text?.characters.count == 5 && "0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.startIndex)!])) != nil && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index(after: (TimeTextField.text?.startIndex)!))!])) != nil) && String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 2))!]) == ":" && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 3))!])) != nil) && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 4))!])) != nil)
-                {
-                    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                    let classes = ThreeClasses(context: context)
-                    classes.classes = ClassTextField.text!
-                    classes.time = TimeTextField.text!
-                    classes.location = LocationTextField.text!
-                    classes.subject = subjectName
-                    if DaySegmented.selectedSegmentIndex == 0 {
-                        classes.day = "Monday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 1 {
-                        classes.day = "Tuesday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 2 {
-                        classes.day = "Wednesday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 3 {
-                        classes.day = "Thursday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 4 {
-                        classes.day = "Friday"
-                    }
-                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                    self.removeAnimate()
-                } else {
-                    let alertVC = UIAlertController(title: "ERROR", message: "Time Text Field has incorrect format! \n \n Example: 12:30", preferredStyle: .alert)
-                    let okay = UIAlertAction(title: "OKAY", style: .default, handler: nil)
-                    alertVC.addAction(okay)
-                    self.present(alertVC, animated: true, completion: nil)
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let classes = ThreeClasses(context: context)
+                classes.classes = ClassTextField.text!
+                var DateFormat = DateFormatter()
+                DateFormat.dateFormat = "h:mm a"
+                var SelectedDate = DateFormat.string(from: TimePicker.clampedDate)
+                classes.time = String(describing: SelectedDate)
+                DateFormat = DateFormatter()
+                DateFormat.dateFormat = "a HH:mm"
+                SelectedDate = DateFormat.string(from: TimePicker.date)
+                classes.realTime = String(describing: SelectedDate)
+                classes.location = LocationTextField.text!
+                classes.subject = subjectName
+                if DaySegmented.selectedSegmentIndex == 0 {
+                    classes.day = "Monday"
                 }
-                
+                if DaySegmented.selectedSegmentIndex == 1 {
+                    classes.day = "Tuesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 2 {
+                    classes.day = "Wednesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 3 {
+                    classes.day = "Thursday"
+                }
+                if DaySegmented.selectedSegmentIndex == 4 {
+                    classes.day = "Friday"
+                }
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                self.removeAnimate()
             }
             if classNumber == "4" {
-                if TimeTextField.text?.characters.count == 5 && "0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.startIndex)!])) != nil && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index(after: (TimeTextField.text?.startIndex)!))!])) != nil) && String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 2))!]) == ":" && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 3))!])) != nil) && ("0123456789".range(of: String(TimeTextField.text![(TimeTextField.text?.index((TimeTextField.text?.startIndex)!, offsetBy: 4))!])) != nil)
-                {
-                    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                    let classes = FourClasses(context: context)
-                    classes.classes = ClassTextField.text!
-                    classes.time = TimeTextField.text!
-                    classes.location = LocationTextField.text!
-                    classes.subject = subjectName
-                    if DaySegmented.selectedSegmentIndex == 0 {
-                        classes.day = "Monday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 1 {
-                        classes.day = "Tuesday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 2 {
-                        classes.day = "Wednesday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 3 {
-                        classes.day = "Thursday"
-                    }
-                    if DaySegmented.selectedSegmentIndex == 4 {
-                        classes.day = "Friday"
-                    }
-                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                    self.removeAnimate()
-                } else {
-                    let alertVC = UIAlertController(title: "ERROR", message: "Time Text Field has incorrect format! \n \n Example: 12:30", preferredStyle: .alert)
-                    let okay = UIAlertAction(title: "OKAY", style: .default, handler: nil)
-                    alertVC.addAction(okay)
-                    self.present(alertVC, animated: true, completion: nil)
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let classes = FourClasses(context: context)
+                classes.classes = ClassTextField.text!
+                var DateFormat = DateFormatter()
+                DateFormat.dateFormat = "h:mm a"
+                var SelectedDate = DateFormat.string(from: TimePicker.clampedDate)
+                classes.time = String(describing: SelectedDate)
+                DateFormat = DateFormatter()
+                DateFormat.dateFormat = "a HH:mm"
+                SelectedDate = DateFormat.string(from: TimePicker.date)
+                classes.realTime = String(describing: SelectedDate)
+                classes.location = LocationTextField.text!
+                classes.subject = subjectName
+                if DaySegmented.selectedSegmentIndex == 0 {
+                    classes.day = "Monday"
                 }
-                
+                if DaySegmented.selectedSegmentIndex == 1 {
+                    classes.day = "Tuesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 2 {
+                    classes.day = "Wednesday"
+                }
+                if DaySegmented.selectedSegmentIndex == 3 {
+                    classes.day = "Thursday"
+                }
+                if DaySegmented.selectedSegmentIndex == 4 {
+                    classes.day = "Friday"
+                }
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                self.removeAnimate()
             }  
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         ClassTextField.resignFirstResponder()
-        TimeTextField.resignFirstResponder()
         LocationTextField.resignFirstResponder()
         return true
     }
@@ -183,7 +175,6 @@ class ClassPopUpViewController: UIViewController, UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         ClassTextField.resignFirstResponder()
-        TimeTextField.resignFirstResponder()
         LocationTextField.resignFirstResponder()
     }
     
@@ -218,5 +209,14 @@ class ClassPopUpViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func BkBtn4(_ sender: Any) {
         self.removeAnimate()
+    }
+}
+
+extension UIDatePicker {
+    public var clampedDate: Date {
+        let referenceTimeInterval = self.date.timeIntervalSinceReferenceDate
+        let remainingSeconds = referenceTimeInterval.truncatingRemainder(dividingBy: TimeInterval(minuteInterval*60))
+        let timeRoundedToInterval = referenceTimeInterval - remainingSeconds
+        return Date(timeIntervalSinceReferenceDate: timeRoundedToInterval)
     }
 }

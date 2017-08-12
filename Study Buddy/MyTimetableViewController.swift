@@ -19,11 +19,11 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var ThursdayTableView: UITableView!
     @IBOutlet weak var FridayTableView: UITableView!
     
-    var mondayClasses = [] as! [Array<Any>]
-    var tuesdayClasses = [] as! [Array<Any>]
-    var wednesdayClasses = [] as! [Array<Any>]
-    var thursdayClasses = [] as! [Array<Any>]
-    var fridayClasses = [] as! [Array<Any>]
+    var mondayClasses = [] as! [Array<String>]
+    var tuesdayClasses = [] as! [Array<String>]
+    var wednesdayClasses = [] as! [Array<String>]
+    var thursdayClasses = [] as! [Array<String>]
+    var fridayClasses = [] as! [Array<String>]
     var classesArray1 : [OneClasses] = []
     var classesArray2 : [TwoClasses] = []
     var classesArray3 : [ThreeClasses] = []
@@ -71,7 +71,7 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == MondayTableView {
-            let sortedMon = mondayClasses.sorted( by: { ($0[2] as? String)! < ($1[2] as? String)! })
+            let sortedMon = mondayClasses.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
             let cell = UITableViewCell()
             let classesSubject = sortedMon[indexPath.row][0]
             let classesClasses = sortedMon[indexPath.row][1]
@@ -84,7 +84,7 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
             return cell
         } else
         if tableView == TuesdayTableView {
-            let sortedTues = tuesdayClasses.sorted( by: { ($0[2] as? String)! < ($1[2] as? String)! })
+            let sortedTues = tuesdayClasses.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
             let cell = UITableViewCell()
             let classesSubject = sortedTues[indexPath.row][0]
             let classesClasses = sortedTues[indexPath.row][1]
@@ -97,7 +97,7 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
             return cell
         } else
         if tableView == WednesdayTableView {
-            let sortedWed = wednesdayClasses.sorted( by: { ($0[2] as? String)! < ($1[2] as? String)! })
+            let sortedWed = wednesdayClasses.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
             let cell = UITableViewCell()
             let classesSubject = sortedWed[indexPath.row][0]
             let classesClasses = sortedWed[indexPath.row][1]
@@ -110,7 +110,7 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
             return cell
         } else
         if tableView == ThursdayTableView {
-            let sortedThurs = thursdayClasses.sorted( by: { ($0[2] as? String)! < ($1[2] as? String)! })
+            let sortedThurs = thursdayClasses.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
             let cell = UITableViewCell()
             let classesSubject = sortedThurs[indexPath.row][0]
             let classesClasses = sortedThurs[indexPath.row][1]
@@ -124,7 +124,7 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
             return cell
         } else
         if tableView == FridayTableView {
-            let sortedFri = fridayClasses.sorted( by: { ($0[2] as? String)! < ($1[2] as? String)! })
+            let sortedFri = fridayClasses.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
             let cell = UITableViewCell()
             let classesSubject = sortedFri[indexPath.row][0]
             let classesClasses = sortedFri[indexPath.row][1]
@@ -160,70 +160,70 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
         fridayClasses.removeAll()
         for i in classesArray1 {
             if i.day! == "Monday" {
-                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Tuesday" {
-                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Wednesday" {
-                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Thursday" {
-                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Friday" {
-                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
         }
         for i in classesArray2 {
             if i.day! == "Monday" {
-                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Tuesday" {
-                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Wednesday" {
-                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Thursday" {
-                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Friday" {
-                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
         }
         for i in classesArray3 {
             if i.day! == "Monday" {
-                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Tuesday" {
-                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Wednesday" {
-                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Thursday" {
-                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Friday" {
-                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
         }
         for i in classesArray4 {
             if i.day! == "Monday" {
-                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                mondayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Tuesday" {
-                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                tuesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Wednesday" {
-                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                wednesdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Thursday" {
-                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                thursdayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
             if i.day! == "Friday" {
-                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!])
+                fridayClasses.append([i.subject!, i.classes!, i.time!, i.location!, i.realTime!])
             }
         }
         

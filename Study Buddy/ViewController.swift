@@ -79,8 +79,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func updateButtons() {
-        print(subjectList[0])
-        print(subjectList)
         ClassOneLabel.text = subjectList[0].subjectOneName
         ClassTwoLabel.text = subjectList[0].subjectTwoName
         ClassThreeLabel.text = subjectList[0].subjectThreeName

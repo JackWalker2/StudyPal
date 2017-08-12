@@ -10,6 +10,7 @@
         <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -27,6 +28,7 @@
         <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -52,6 +54,7 @@
         <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -69,6 +72,7 @@
         <attribute name="classes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -90,17 +94,17 @@
     </entity>
     <elements>
         <element name="ClassView" positionX="-45" positionY="27" width="128" height="105"/>
-        <element name="FourClasses" positionX="0" positionY="54" width="128" height="120"/>
+        <element name="FourClasses" positionX="0" positionY="54" width="128" height="135"/>
         <element name="FourGrade" positionX="36" positionY="99" width="128" height="75"/>
         <element name="FourReminders" positionX="-9" positionY="45" width="128" height="105"/>
-        <element name="OneClasses" positionX="-54" positionY="9" width="128" height="120"/>
+        <element name="OneClasses" positionX="-54" positionY="9" width="128" height="135"/>
         <element name="OneGrade" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="OneReminders" positionX="-36" positionY="36" width="128" height="105"/>
         <element name="SubjectName" positionX="-9" positionY="54" width="128" height="120"/>
-        <element name="ThreeClasses" positionX="-18" positionY="63" width="128" height="120"/>
+        <element name="ThreeClasses" positionX="-18" positionY="63" width="128" height="135"/>
         <element name="ThreeGrade" positionX="0" positionY="72" width="128" height="75"/>
         <element name="ThreeReminders" positionX="18" positionY="81" width="128" height="105"/>
-        <element name="TwoClasses" positionX="-45" positionY="36" width="128" height="120"/>
+        <element name="TwoClasses" positionX="-45" positionY="36" width="128" height="135"/>
         <element name="TwoGrade" positionX="-27" positionY="54" width="128" height="75"/>
         <element name="TwoReminders" positionX="-36" positionY="45" width="128" height="105"/>
         <element name="ViewColor" positionX="-9" positionY="54" width="128" height="105"/>
