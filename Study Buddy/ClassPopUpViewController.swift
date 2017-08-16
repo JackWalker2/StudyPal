@@ -47,6 +47,10 @@ class ClassPopUpViewController: UIViewController, UITextFieldDelegate {
                 DateFormat.dateFormat = "a HH:mm"
                 SelectedDate = DateFormat.string(from: TimePicker.date)
                 classes.realTime = String(describing: SelectedDate)
+                DateFormat = DateFormatter()
+                DateFormat.dateFormat = "E, a HH:mm"
+                SelectedDate = DateFormat.string(from: TimePicker.date)
+                classes.realDay = String(describing: SelectedDate)
                 classes.location = LocationTextField.text!
                 classes.subject = subjectName
                 if DaySegmented.selectedSegmentIndex == 0 {

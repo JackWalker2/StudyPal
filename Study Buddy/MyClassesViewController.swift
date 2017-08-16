@@ -42,6 +42,11 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
     var remindersArray44 = [] as! [Array<String>]
     var classesArray4 : [FourClasses] = []
     
+    var ClassOneArray = [] as! [Array<String>]
+    var ClassTwoArray = [] as! [Array<String>]
+    var ClassThreeArray = [] as! [Array<String>]
+    var ClassFourArray = [] as! [Array<String>]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -220,21 +225,6 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
         } else
             if tableView == ClassesTableView {
                 if classNumber == "1" {
-                    
-//                    let sortedClasses = classesArray.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
-                    
-//                    let sortedTues = tuesdayClasses.sorted(by: { $0[4].compare($1[4]) == .orderedAscending })
-//                    let cell = UITableViewCell()
-//                    let classesSubject = sortedTues[indexPath.row][0]
-//                    let classesClasses = sortedTues[indexPath.row][1]
-//                    let classesTime = sortedTues[indexPath.row][2]
-//                    let classesLocation = sortedTues[indexPath.row][3]
-//                    cell.textLabel?.text = "\(String(describing: classesSubject)): \(String(describing: classesClasses)) @ \(String(describing: classesLocation)), \(String(describing: classesTime))"
-//                    cell.textLabel?.font = UIFont(name: "AvenirNextCondensed-Regular", size: 18)
-//                    cell.textLabel?.adjustsFontSizeToFitWidth = true
-//                    cell.textLabel?.textAlignment = .center
-//                    return cell
-                    
                     let cell = UITableViewCell()
                     let classes = classesArray[indexPath.row]
                     if classes.classes == nil {
@@ -368,6 +358,7 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
         } catch {
             return
         }
+        
     }
     
     
