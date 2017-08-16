@@ -22,7 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var classView : [ClassView] = []
     var subjectList : [SubjectName] = []
     
-//    @IBOutlet weak var bannerView: GADBannerView!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var RemindersTableView: UITableView!
     @IBOutlet weak var ClassOneLabel: UILabel!
     @IBOutlet weak var ClassTwoLabel: UILabel!
@@ -57,9 +58,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         RemindersTableView.reloadData()
         
-//        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
-//        bannerView.rootViewController = self
-//        bannerView.load(GADRequest())
+        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     override func viewWillAppear(_ animated: Bool) {

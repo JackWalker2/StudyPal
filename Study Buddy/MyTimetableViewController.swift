@@ -12,7 +12,7 @@ import GoogleMobileAds
 class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-//    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var MondayTableView: UITableView!
     @IBOutlet weak var TuesdayTableView: UITableView!
     @IBOutlet weak var WednesdayTableView: UITableView!
@@ -45,9 +45,9 @@ class MyTimetableViewController: UIViewController, UITableViewDelegate, UITableV
         FridayTableView.delegate = self
         FridayTableView.dataSource = self
         
-//        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
-//        bannerView.rootViewController = self
-//        bannerView.load(GADRequest())
+        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -21,7 +21,7 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var ClassesTableView: UITableView!
     @IBOutlet weak var MyClassLabel: UILabel!
     @IBOutlet weak var TitleView: UIView!
-//    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     var titleName: String = ""
     var backgroundColour = UIColor.blue
@@ -68,9 +68,9 @@ class MyClassesViewController: UIViewController, UITableViewDelegate, UITableVie
         RemindersTableView.reloadData()
         ClassesTableView.reloadData()
         
-//        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
-//        bannerView.rootViewController = self
-//        bannerView.load(GADRequest())
+        bannerView.adUnitID = "ca-app-pub-7039390731388004/3927035371"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     override func viewWillAppear(_ animated: Bool) {
