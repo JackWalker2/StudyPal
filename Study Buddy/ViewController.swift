@@ -22,6 +22,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var classView : [ClassView] = []
     var subjectList : [SubjectName] = []
     
+    var RemArray1 : [OneReminders] = []
+    var ClassArray1 : [OneClasses] = []
+    var GradeArray1 : [OneGrade] = []
+    var RemArray2 : [TwoReminders] = []
+    var ClassArray2 : [TwoClasses] = []
+    var GradeArray2 : [TwoGrade] = []
+    var RemArray3 : [ThreeReminders] = []
+    var ClassArray3 : [ThreeClasses] = []
+    var GradeArray3 : [ThreeGrade] = []
+    var RemArray4 : [FourReminders] = []
+    var ClassArray4 : [FourClasses] = []
+    var GradeArray4 : [FourGrade] = []
+    var ClassView1 : [ClassView] = []
+    var SubjectArray : [SubjectName] = []
+    
     
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var RemindersTableView: UITableView!
@@ -38,6 +53,74 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let initialise = FirstTime(context: context)
+        if initialise.firstTime == false {
+            do {
+                self.RemArray1 = try context.fetch(OneReminders.fetchRequest()) as [OneReminders]
+                self.ClassArray1 = try context.fetch(OneClasses.fetchRequest()) as [OneClasses]
+                self.GradeArray1 = try context.fetch(OneGrade.fetchRequest()) as [OneGrade]
+                self.RemArray2 = try context.fetch(TwoReminders.fetchRequest()) as [TwoReminders]
+                self.ClassArray2 = try context.fetch(TwoClasses.fetchRequest()) as [TwoClasses]
+                self.GradeArray2 = try context.fetch(TwoGrade.fetchRequest()) as [TwoGrade]
+                self.RemArray3 = try context.fetch(ThreeReminders.fetchRequest()) as [ThreeReminders]
+                self.ClassArray3 = try context.fetch(ThreeClasses.fetchRequest()) as [ThreeClasses]
+                self.GradeArray3 = try context.fetch(ThreeGrade.fetchRequest()) as [ThreeGrade]
+                self.RemArray4 = try context.fetch(FourReminders.fetchRequest()) as [FourReminders]
+                self.ClassArray4 = try context.fetch(FourClasses.fetchRequest()) as [FourClasses]
+                self.GradeArray4 = try context.fetch(FourGrade.fetchRequest()) as [FourGrade]
+                self.ClassView1 = try context.fetch(ClassView.fetchRequest()) as [ClassView]
+                self.SubjectArray = try context.fetch(SubjectName.fetchRequest()) as [SubjectName]
+            } catch {
+                return
+            }
+            for i in self.RemArray1 {
+                context.delete(i)
+            }
+            for i in self.ClassArray1 {
+                context.delete(i)
+            }
+            for i in self.GradeArray1 {
+                context.delete(i)
+            }
+            for i in self.RemArray2 {
+                context.delete(i)
+            }
+            for i in self.ClassArray2 {
+                context.delete(i)
+            }
+            for i in self.GradeArray2 {
+                context.delete(i)
+            }
+            for i in self.RemArray3 {
+                context.delete(i)
+            }
+            for i in self.ClassArray3 {
+                context.delete(i)
+            }
+            for i in self.GradeArray3 {
+                context.delete(i)
+            }
+            for i in self.RemArray4 {
+                context.delete(i)
+            }
+            for i in self.ClassArray4 {
+                context.delete(i)
+            }
+            for i in self.GradeArray4 {
+                context.delete(i)
+            }
+            for i in self.ClassView1 {
+                context.delete(i)
+            }
+            for i in self.SubjectArray {
+                context.delete(i)
+            }
+            initialise.firstTime = true
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
         
         TimetableView.layer.borderColor = UIColor.white.cgColor
         ClassOneView.layer.borderColor = UIColor.white.cgColor
